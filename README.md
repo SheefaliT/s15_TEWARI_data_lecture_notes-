@@ -19,8 +19,8 @@
     - How to access it?
     - Has to clean before it can be stored
     - Example
-      - Twitter -> clients
-      - Tweetbot -> IOS
+      - Twitter --> clients
+      - Tweetbot --> IOS
   - Infoviz
     - Huge data sets, how do you view them to the user?
     - D3 (JS framework)
@@ -28,9 +28,9 @@
     - R
   - Data engineering
     - Data life cycle
-    - Question -> curation triage -> prioritization [DATA SCIENTIST]. Collection generation [SOFTWARE ENGINEERS] -> clean up     [SOFTWARE ENGINEERS] -> storage [SOFTWARE ENGINEERS] <- -> processing/analysis [DATA SCIENTISTS] -> query + visualize + act [DATA SCIENTISTS]
+    - Question -> curation triage --> prioritization [DATA SCIENTIST]. Collection generation [SOFTWARE ENGINEERS] --> clean up     [SOFTWARE ENGINEERS] --> storage [SOFTWARE ENGINEERS] <-- --> processing/analysis [DATA SCIENTISTS] --> query + visualize + act [DATA SCIENTISTS]
 - Big Data
   - Request response cycle 
-  - Type http:// -> access HTML file. HTTP request. Network protocol. -> Get -> POST -> PUT -> DEL
+  - Type http:// --> access HTML file. HTTP request. Network protocol. --> Get --> POST --> PUT --> DEL
 
 
