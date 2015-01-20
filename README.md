@@ -116,8 +116,8 @@ Errors
 ## Lecture 3: 01/20/15
 
 *REST*
-	- Architectural style for web services 
-		○ Invented by Roy Fielding at UC Irvine 
+- Architectural style for web services 
+	- Invented by Roy Fielding at UC Irvine 
 	- REST is an approach to developing web services that mimics the design of the Web itself
 	- Your service provides access to a linked set of resources 
 	- For each resource, you can perform operations on it similar to the main operations (aka methods) of the HTTP specification. 
