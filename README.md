@@ -113,4 +113,57 @@ Id
 <-- output
 Errors
 
+## Lecture 3: 01/20/15
 
+*REST*
+	- Architectural style for web services 
+		○ Invented by Roy Fielding at UC Irvine 
+	- REST is an approach to developing web services that mimics the design of the Web itself
+	- Your service provides access to a linked set of resources 
+	- For each resource, you can perform operations on it similar to the main operations (aka methods) of the HTTP specification. 
+	- CRUD
+	- Post, get, put, delete 
+	- Examples 
+		○ GET /api/1.0/users --> retrieve a list of all users
+		○ GET /api/1.0/users/0  --> retrieve the details of User 0
+		○ POST /api/1.0/users --> create a new user
+	- Examples (updating a user)
+		○ PUT /api/1.0/users/0 --> update User 0
+		○ DELETE /api/1.0/users/0 --> delete User 0
+		○ GET /api/1.0/search?q=tattersail --> perform a search with the query tattersail (%20 = space)
+	- Each operation may produce a result
+		○ With RESTful services, JSON format is king
+			§ Keys and values = strings
+			§ Highly compressible 
+		○ POST and PUT methods typically send data
+			§ Also in JSON format
+			§ May be in the URL or in the body of the HTTP Request 
+				□ For GET, the data may appear as query params 
+		○ Other formats are possible: HTML and XML are typical 
+		○ If a request needs to be authenticated 
+			§ The authentication data appears in HTTP headers 
+			§ HTTP: how to log into websites, authentication, cookies
+			§ Basic authentication: particular header you need to populate with user info
+
+*How do you think operations on two resources are handled?*
+	- Two different relative path: /users/0 and /possessions/1 (users that can have possessions; can create possessions independently and individually create users).
+		○ /users/0/possessions (possessions owned by user 0)
+	- GET /api/1.0/posts/0/comments/1 --> get first comment on post 0
+	- POST /api/1.0/posts/0/comments --> create a new comment on post 0
+
+*Issues*
+	- Security: How do you authenticate users?
+	- Identity: How are ids assigned to resources?
+	- Failure: How do we handle failure situations?
+	- Persistence: How are resources stored?
+
+*Example*
+	- Contacts web service
+	- Implemented in both Ruby and JS
+	- Technologies used:
+		○ Sinatra (handling HTTP request)
+		○ Rspec (testing)
+		○ Typhoeus (Ruby library to do HTTP request on client side)
+		○ Node (wrapper around chrome JS engine (VS) & embedded around the chrome)
+		○ Express (Ruby side for node)
+		
