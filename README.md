@@ -146,24 +146,24 @@ Errors
 			§ Basic authentication: particular header you need to populate with user info
 
 *How do you think operations on two resources are handled?*
-	- Two different relative path: /users/0 and /possessions/1 (users that can have possessions; can create possessions independently and individually create users).
-		○ /users/0/possessions (possessions owned by user 0)
+- Two different relative path: /users/0 and /possessions/1 (users that can have possessions; can create possessions independently and individually create users).
+	- /users/0/possessions (possessions owned by user 0)
 	- GET /api/1.0/posts/0/comments/1 --> get first comment on post 0
 	- POST /api/1.0/posts/0/comments --> create a new comment on post 0
 
 *Issues*
-	- Security: How do you authenticate users?
-	- Identity: How are ids assigned to resources?
-	- Failure: How do we handle failure situations?
-	- Persistence: How are resources stored?
+- Security: How do you authenticate users?
+- Identity: How are ids assigned to resources?
+- Failure: How do we handle failure situations?
+- Persistence: How are resources stored?
 
 *Example*
-	- Contacts web service
-	- Implemented in both Ruby and JS
-	- Technologies used:
-		○ Sinatra (handling HTTP request)
-		○ Rspec (testing)
-		○ Typhoeus (Ruby library to do HTTP request on client side)
-		○ Node (wrapper around chrome JS engine (VS) & embedded around the chrome)
-		○ Express (Ruby side for node)
+- Contacts web service
+- Implemented in both Ruby and JS
+- Technologies used:
+	- Sinatra (handling HTTP request)
+	- Rspec (testing)
+	- Typhoeus (Ruby library to do HTTP request on client side)
+	- Node (wrapper around chrome JS engine (VS) & embedded around the chrome)
+	- Express (Ruby side for node)
 		
