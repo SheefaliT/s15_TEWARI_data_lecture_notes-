@@ -180,9 +180,6 @@ Node.js
 - create server
 - "If user click here, do this."
 - Add to work to the event queue
-- Callbacks
-	- Event emitters 
+- Callbacks: Event emitters 
 - Node = single threaded
-- 
-
-Demo in class with curl.
+- Demo in class with curl
