@@ -166,4 +166,23 @@ Errors
 	- Typhoeus (Ruby library to do HTTP request on client side)
 	- Node (wrapper around chrome JS engine (VS) & embedded around the chrome)
 	- Express (Ruby side for node)
-		
+
+## Lecture 4: 01/22/15
+
+Presentations over git and github.
+
+## Lecture 5: 01/27/15
+
+Node.js
+
+- http core module
+- require function
+- create server
+- "If user click here, do this."
+- Add to work to the event queue
+- Callbacks
+	- Event emitters 
+- Node = single threaded
+- 
+
+Demo in class with curl.
