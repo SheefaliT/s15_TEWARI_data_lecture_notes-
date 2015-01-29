@@ -183,3 +183,12 @@ Node.js
 - Callbacks: Event emitters 
 - Node = single threaded
 - Demo in class with curl
+
+## Lecture 6: 01/29/15
+- Went over student links
+
+Express
+- Web applicatoin framework written in JS for use in Node.js
+- Influenced by Sinata
+- Middleware
+- Developed web servce in Express: demo
