@@ -222,5 +222,5 @@ Controllers
 -  Declared using the controller function of an Angular module 
 
  ## Lecture 8: 02/05/15
- - Go over angular js app
+- Go over angular js app
  
