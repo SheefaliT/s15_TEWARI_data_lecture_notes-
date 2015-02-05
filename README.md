@@ -192,3 +192,35 @@ Express
 - Influenced by Sinata
 - Middleware
 - Developed web servce in Express: demo
+
+## Lecture 7: 02/03/15
+Angular JS
+- Client-side web application 
+- MVC
+- Javascript
+
+Core Concepts
+- Data bindings
+	- Value of HTML tag can be associated with a model object 
+- Controllers
+	- Modularize web app
+- Services
+	- Services are created when an Angular app is initialized
+- Directives
+	- Ubiquitous in Angular
+	- Their primary use is to allow Angular to integrate into HTML in a natural way 
+- Embeddable
+	- Easy to embed a small Angular component into an existing page and then incrementally add new functionality over time 
+- Injectable
+	- Dependency injection 
+	- Controllers and services declare their dependencies up front
+
+Modules
+- Primary way to package up a set of controllers into an Angular application
+
+Controllers
+-  Declared using the controller function of an Angular module 
+
+ ## Lecture 8: 02/05/15
+ - Go over angular js app
+ 
