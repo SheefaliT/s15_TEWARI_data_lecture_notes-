@@ -2,7 +2,7 @@
 
 ## Lecture 1: 01/13/15
 
-- Created a repository for writing notes.
+- Created a repository for writing notes
 - Data Engineering: What is it?
   - Social Networks
   - Data Analytics 
@@ -221,6 +221,16 @@ Modules
 Controllers
 -  Declared using the controller function of an Angular module 
 
- ## Lecture 8: 02/05/15
+## Lecture 8: 02/05/15
 - Go over angular js app
+
+## Lecture 9: 02/10/15
+- Javascript
+	- Default binding
+		- This
+			- Don't have to declare it
+			- Can't assign a value to it
+			- If you assign a property to this in a function, then that property is created in the global context
+	- Blocks don't create scope; functions do
+- Went through contacts web app
  
