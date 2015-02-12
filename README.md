@@ -233,4 +233,18 @@ Controllers
 			- If you assign a property to this in a function, then that property is created in the global context
 	- Blocks don't create scope; functions do
 - Went through contacts web app
- 
+
+## Lecture 10: 02/12/15
+- Consumer keys, access tokens
+	- Access to Twitter's APIs are secured by OAuth
+	- A consumer key identifies a particular application (and developer)
+	- An access token identifies a particular user
+	- OAuth allows an application to act on behalf of many users
+
+# OAuth.Properties 
+- First step in accessing Twitter data via the REST, Search, and Streaming APIs is to create a file called oauth.properties
+- Single JSON object inside with these properties
+
+# Utilities 
+- To sign the request, we have to pass the method, url, params, and our tokens (get, post, put, delete)
+
