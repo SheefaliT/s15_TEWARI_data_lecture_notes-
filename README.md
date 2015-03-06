@@ -248,3 +248,115 @@ Controllers
 # Utilities 
 - To sign the request, we have to pass the method, url, params, and our tokens (get, post, put, delete)
 
+## Lecture 11: 02/17/15
+- Highlights of framework
+	- Five REST API endpoints and two Streaming API endpoints 
+	- Automatically handles Twitter Rate Limits
+	- Provides implementations of the techniques described in Working with Timelines and Working with Cursors
+- Understanding framwork
+	- Property File with Consumer Key and Access Token
+	- URI Escape HTTP Request Parameters
+	- Use of SimpleOAuth to create an Authorization Header
+	- Use of Typhoeus to create a request and send it
+- High level view of framework
+- Class hierarchy  
+- Twitter Request
+	- Standardized Constructor
+	- Expects an args hash with up to three entries
+		- params: the parameters that go on the request
+		- data: the data needed by the request
+		- data MUST contain a :props key that points at the location of the properties file
+	- log: an instance of a Ruby logger
+		- If not supplied, a default one is used
+	- Sets the contract required by all sub-classes 
+- Contract
+	- A TwitterRequest has a public collect method that yields collected data back to its caller
+	- Subclasses must provide implementations of:
+		- url: the URL of the Twitter endpoint they access
+		- request_name: the name used in the log for this request
+		- twitter_endpoint: the endpoint used to look up rate limits for this request
+		- success: a method that handles the response.body of a successful request
+	- Subclasses may provide implementations of:
+		- error: a method that handles failed requests; the default prints out information about the failure and then throws a runtime exception
+		- authorization, options, make_request, and collect can also be overridden but they must preserve the semantics of the default operations
+- Helpers
+	- Params and Props
+		- Only two new features in the Params helper
+		- The ability to control if a parameter is included in a request
+		- The ability to display the parameters that are being sent with a request 
+	- Logging
+		- The logging helper consists of a custom class definition and a method to create a default logger
+	- Rates 
+		- The Rates helper allows the framework to automatically keep track of rate limits for a given Twitter endpoint
+		- If you run out of invocations, it will block your next call and automatically sleep until the current Twitter window is over
+		- The default make_request ensures that rates are checked on each request
+		- The Rates helper invokes a Twitter endpoint to get the application's current set of rate limits
+		- These rates are stored in a class variable so that they are shared across all TwitterRequest instances created by an application
+		- These global rates are only refreshed when needed
+		- The frameworks features three Request sub-classes
+		- MaxIdRequest
+			- A subclass for endpoints that need to traverse timelines with the max_id parameter
+			-It defines a new contract consisting of:
+			- init_condition: set-up a variable to track our progress traversing the timeline
+			- condition: check the variable to see if we should continue traversing the timeline
+			- update_condition: update the variable after a request has been made and progress on the timeline has occurred
+		- CursorRequest
+			- CursorRequest is similar to MaxIdRequest
+			- However, it does not need to define a contract for subclasses
+			- It can implement all of the required functionality directly 
+		- StreamingRequest
+			- StreamingTwitterRequest is different in that its collect method is designed to run forever
+			- We use Typhoeus differently to do a streaming request
+				- We create a request and then define a series of event handlers on the request.
+				- These handlers get called when appropriate as data streams in 
+			- The handlers are:
+				- on_headers: The response has started to stream back to us; we can check the headers to make sure everything is okay
+				- on_body: Some data has been received from the server; we need to process it
+				- on_complete: The response has finished; this can happen if the server decides to terminate the connection
+		- One request, RateLimits, is also a direct subclass of TwitterRequest but it's not a new type of request, it just customizes TwitterRequest to hit the rate_limit_status endpoint
+	
+## Lecture 12: 02/19/15
+- No SQL
+- 
+
+
+## Lecture 13: 02/24/15
+
+
+## Lecture 14: 02/26/15
+
+
+## Lecture 15: 03/02/15
+- Worked in class over HW questions
+
+## Lecture 16: 03/05/15
+- Import tweets into MongoDB
+	- Construct a program for importing tweets into MongoDB 
+	- Assumptions
+		- Input file
+		- Name of Database: data
+		- Name of Collection: tweets
+		- Use mongo Ruby gem for accessing MongoDB
+	- Get started
+		- Create gemfile  
+	- Initial version
+		- Reads its input file = import.rb 
+	- Connecting to Mongo
+		- Using the 'mongo' Ruby Gem 
+		- Back to import.rb
+- Running/Checking MongoDB
+	- MongoDB needs to be running
+	- mongo --config /usr/local/etc/mongod.conf
+	- OR: mongo --dbpath <path to data directory>
+	- To launch the mongo client: mongo
+- Before We Import 
+	- 4 places where created_at can be found on a tweet
+		- tweet['created_at']
+		- tweet['user']['created_at']
+		- tweet['retweeted_status
+	
+- Perform queries with no indexes 
+- Create indexes
+- Perform queries with indexes to compare 
+- Advanced indexes
+	- Compound indexes 
