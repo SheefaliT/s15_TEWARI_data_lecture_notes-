@@ -317,14 +317,35 @@ Controllers
 	
 ## Lecture 12: 02/19/15
 - No SQL
-- 
-
+- Web Analytics Application
+	- Scaling problems
+	- Can't keep up with write demand 
+- Types of NoSQL DBs
+	- Key value
+	- Graphs
+	- Columnar
+	- Documents
 
 ## Lecture 13: 02/24/15
-
+- Couch DB
+	- Document NoSQL Database
+		- Stores docs
+		- Each doc contains everythign that might be needed by an app
+		- No schema is enforced: each doc can have different attributes 
+			- Allows for natural modeling of domains
+- CAP Theorem
+	- Consistency
+	- Availability
+	- Partition Tolerance
 
 ## Lecture 14: 02/26/15
-
+- MongoDB
+	- Indexes: B-Trees
+	- CAP Theorem
+		- Consistency
+		- Availability
+- Documents order hierarchically 
+- Type and case sensitive 
 
 ## Lecture 15: 03/02/15
 - Worked in class over HW questions
@@ -360,3 +381,152 @@ Controllers
 - Perform queries with indexes to compare 
 - Advanced indexes
 	- Compound indexes 
+## Lecture 17
+- Indexes
+	- Can greatly reduce the number of documents that need to be examined to satisfy a query
+	- Index Cardinality
+	- Number of possible values for an indexed field
+	- A field like employment status has low cardinality since it has two values yes/no
+	- Whereas name has high carnality
+	- In general you only want indexes on high cardinality fields
+	- Compound indexes can be difficult
+	- Enable different queries: Point Queries: search for a single value, then traverse index (either direction)
+	- Multi-Value Queries: search for a range of values
+	- Full-Text Indexes
+	- Support for a full text search
+	- Only one full-text index per collection
+	- Geospatial Indexes
+	- Cartesian Index
+	- Spherical Index: 2Dsphere
+	- GeoJSON format
+	- Supports points, lines, and polygons 
+- MapReduce 
+## Lecture 18
+- Apache Solr
+	- Lucene
+	- CU FCQ
+	- Solr: RestAPI
+- Redis
+	- Key value store "Data-structure server"
+	- Not a DB replacement
+	- Real-time data apps
+- Kafka
+	- Data in real-time 
+	- Distributed
+	- Fault-tolerant
+	- High-thoughput
+	- Publish-subscribe
+	- Message system
+## Lecture 19
+- Kafka demo
+- Memcached
+	- Distributed memory object caching system
+	- Large hash table
+	- Data = disposable 
+	- Clust is flat
+- Document DB (Azure)
+	- Schema-free
+	- Indexing database
+## Lecture 20
+- Neo4J
+	- Graph based database
+	- NoSQL
+	- Whiteboard friendly
+	- Java based
+	- Fast for associative data sets
+- HBase
+	- Hadoop database 
+	- Provides big table capabilities on top of Hadoop
+	- Table schema defines only column families
+	- Each cell value of the table has a timestamp 
+## Lecture 21
+- Riak
+	- Key value store database
+	- NoSQL
+	- Written in Erleng
+	- No master node
+- Cassandra
+	- Scaled NoSQL database
+	- Always on architecture
+	- Fast linear-scale performance
+	- Elastic scalability 
+	- Rarely fails
+- Indexing: Cassandra
+	- Insert rows similar to SQL
+	- Composite columns with primary key
+	- Clustering column sorts the data 
+	- Secondary indexes
+## Lecture 22
+- Javascript Closures and Design Patterns
+	- Scope
+	- Closure
+	- Module design patter
+	- Inheritance vs prototype
+	- this
+- Ruby on Rails
+	- Ruby
+	- Rails framework
+	- Demo
+- Flask
+	- Python
+	- Micro framework
+## Lecture 23
+- Hadoop
+	- Master/slave
+	- MapReduce
+- Spark
+	- Fast Data Sharing
+	- MapReduce+
+	- Cluster wide caching
+- Apache Storm
+	- Stream processing
+	- Guaranteed message processing
+## Lecture 24
+- React
+	- Released by Facebook 
+	- Maintains a virtual DOM
+	- One-way state binding
+	- JSX
+- Flux
+	- Single directional data flow
+	- Built by facebook to combate scalability of MVC
+## Lecture 25
+- Google Cloud Platform
+	- Support Python, Java, PHP, Go
+	- Google handles shading, load balancing, traffic splitting, elasticity
+	- 3 tiers of cloud storage 
+- Docker
+	- Microservice 
+	- Containers
+- Capistrano
+	- Creates custom tasks
+	- Automated server deployment 
+## Lecture 26
+- Turf
+	- GeoJSON
+	- Analysis
+- Javascript InfoVis Toolkit
+	- Library to create interactive data visualization on the web
+	- Composeable 
+	- Data stored in static JSON objects
+- Flask
+	- BSD
+	- Extendable
+## Lecture 27
+- D3
+	- select
+	- bind
+- Leaflet
+	- Layering
+	- Multiplatform
+	- Call maps
+## Lecture 28
+- AWS
+	- Server
+- Javascript Async and Promises
+	- Event loop
+	- Callback
+	- Promises
+		- Chain
+- More student presentations
+
