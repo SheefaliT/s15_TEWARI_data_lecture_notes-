@@ -56,8 +56,6 @@ How to operate it on service?
 In Class Coding
 In VIM:
 
-"
-
 require 'sinatra'
 require 'sinatra/relaoder' if development?
 
@@ -68,8 +66,6 @@ end
 get '/api/1.0/whattimeisit' do
 	"Hello World"
 end
-
-"
 
 Then in ANOTHER window:
 
