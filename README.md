@@ -56,16 +56,18 @@ How to operate it on service?
 In Class Coding
 In VIM:
 
-require 'sinatra'
-require 'sinatra/relaoder' if development?
+::
 
-configure do
-	Set :port, 3000
-end
-
-get '/api/1.0/whattimeisit' do
-	"Hello World"
-end
+	require 'sinatra'
+	require 'sinatra/relaoder' if development?
+	
+	configure do
+		Set :port, 3000
+	end
+	
+	get '/api/1.0/whattimeisit' do
+		"Hello World"
+	end
 
 Then in ANOTHER window:
 
