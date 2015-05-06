@@ -1,6 +1,6 @@
 # Lecture Notes for Data Engineering in Spring 2015
 
-## Lecture 1: 01/13/15
+## Lecture 1
 
 - Created a repository for writing notes
 - Data Engineering: What is it?
@@ -33,7 +33,7 @@
   - Request response cycle 
   - Type http:// --> access HTML file. HTTP request. Network protocol. --> Get --> POST --> PUT --> DEL
 
-## Lecture 2: 01/15/15
+## Lecture 2
 
 Web browser --> web server (HTTP server) --> handler
 Example: ebay.come/product/10
@@ -113,7 +113,7 @@ Id
 <-- output
 Errors
 
-## Lecture 3: 01/20/15
+## Lecture 3
 
 *REST*
 - Architectural style for web services 
@@ -167,11 +167,11 @@ Errors
 	- Node (wrapper around chrome JS engine (VS) & embedded around the chrome)
 	- Express (Ruby side for node)
 
-## Lecture 4: 01/22/15
+## Lecture 4
 
 Presentations over git and github.
 
-## Lecture 5: 01/27/15
+## Lecture 5
 
 Node.js
 
@@ -184,7 +184,8 @@ Node.js
 - Node = single threaded
 - Demo in class with curl
 
-## Lecture 6: 01/29/15
+## Lecture 6
+
 - Went over student links
 
 Express
@@ -193,7 +194,8 @@ Express
 - Middleware
 - Developed web servce in Express: demo
 
-## Lecture 7: 02/03/15
+## Lecture 7
+
 Angular JS
 - Client-side web application 
 - MVC
@@ -221,10 +223,12 @@ Modules
 Controllers
 -  Declared using the controller function of an Angular module 
 
-## Lecture 8: 02/05/15
+## Lecture 8
+
 - Go over angular js app
 
-## Lecture 9: 02/10/15
+## Lecture 9
+
 - Javascript
 	- Default binding
 		- This
@@ -234,7 +238,8 @@ Controllers
 	- Blocks don't create scope; functions do
 - Went through contacts web app
 
-## Lecture 10: 02/12/15
+## Lecture 10
+
 - Consumer keys, access tokens
 	- Access to Twitter's APIs are secured by OAuth
 	- A consumer key identifies a particular application (and developer)
@@ -248,7 +253,8 @@ Controllers
 # Utilities 
 - To sign the request, we have to pass the method, url, params, and our tokens (get, post, put, delete)
 
-## Lecture 11: 02/17/15
+## Lecture 11
+
 - Highlights of framework
 	- Five REST API endpoints and two Streaming API endpoints 
 	- Automatically handles Twitter Rate Limits
@@ -315,7 +321,8 @@ Controllers
 				- on_complete: The response has finished; this can happen if the server decides to terminate the connection
 		- One request, RateLimits, is also a direct subclass of TwitterRequest but it's not a new type of request, it just customizes TwitterRequest to hit the rate_limit_status endpoint
 	
-## Lecture 12: 02/19/15
+## Lecture 12
+
 - No SQL
 - Web Analytics Application
 	- Scaling problems
@@ -326,7 +333,8 @@ Controllers
 	- Columnar
 	- Documents
 
-## Lecture 13: 02/24/15
+## Lecture 13
+
 - Couch DB
 	- Document NoSQL Database
 		- Stores docs
@@ -338,7 +346,8 @@ Controllers
 	- Availability
 	- Partition Tolerance
 
-## Lecture 14: 02/26/15
+## Lecture 14
+
 - MongoDB
 	- Indexes: B-Trees
 	- CAP Theorem
@@ -347,10 +356,12 @@ Controllers
 - Documents order hierarchically 
 - Type and case sensitive 
 
-## Lecture 15: 03/02/15
+## Lecture 15
+
 - Worked in class over HW questions
 
-## Lecture 16: 03/05/15
+## Lecture 16
+
 - Import tweets into MongoDB
 	- Construct a program for importing tweets into MongoDB 
 	- Assumptions
@@ -381,7 +392,9 @@ Controllers
 - Perform queries with indexes to compare 
 - Advanced indexes
 	- Compound indexes 
+
 ## Lecture 17
+
 - Indexes
 	- Can greatly reduce the number of documents that need to be examined to satisfy a query
 	- Index Cardinality
@@ -401,7 +414,9 @@ Controllers
 	- GeoJSON format
 	- Supports points, lines, and polygons 
 - MapReduce 
+
 ## Lecture 18
+
 - Apache Solr
 	- Lucene
 	- CU FCQ
@@ -417,7 +432,9 @@ Controllers
 	- High-thoughput
 	- Publish-subscribe
 	- Message system
+
 ## Lecture 19
+
 - Kafka demo
 - Memcached
 	- Distributed memory object caching system
@@ -427,7 +444,9 @@ Controllers
 - Document DB (Azure)
 	- Schema-free
 	- Indexing database
+
 ## Lecture 20
+
 - Neo4J
 	- Graph based database
 	- NoSQL
@@ -439,7 +458,9 @@ Controllers
 	- Provides big table capabilities on top of Hadoop
 	- Table schema defines only column families
 	- Each cell value of the table has a timestamp 
+
 ## Lecture 21
+
 - Riak
 	- Key value store database
 	- NoSQL
@@ -456,7 +477,9 @@ Controllers
 	- Composite columns with primary key
 	- Clustering column sorts the data 
 	- Secondary indexes
+
 ## Lecture 22
+
 - Javascript Closures and Design Patterns
 	- Scope
 	- Closure
@@ -470,7 +493,9 @@ Controllers
 - Flask
 	- Python
 	- Micro framework
+
 ## Lecture 23
+
 - Hadoop
 	- Master/slave
 	- MapReduce
@@ -481,7 +506,9 @@ Controllers
 - Apache Storm
 	- Stream processing
 	- Guaranteed message processing
+
 ## Lecture 24
+
 - React
 	- Released by Facebook 
 	- Maintains a virtual DOM
@@ -490,7 +517,9 @@ Controllers
 - Flux
 	- Single directional data flow
 	- Built by facebook to combate scalability of MVC
+
 ## Lecture 25
+
 - Google Cloud Platform
 	- Support Python, Java, PHP, Go
 	- Google handles shading, load balancing, traffic splitting, elasticity
@@ -501,7 +530,9 @@ Controllers
 - Capistrano
 	- Creates custom tasks
 	- Automated server deployment 
+
 ## Lecture 26
+
 - Turf
 	- GeoJSON
 	- Analysis
@@ -512,7 +543,9 @@ Controllers
 - Flask
 	- BSD
 	- Extendable
+
 ## Lecture 27
+
 - D3
 	- select
 	- bind
@@ -520,7 +553,9 @@ Controllers
 	- Layering
 	- Multiplatform
 	- Call maps
+
 ## Lecture 28
+
 - AWS
 	- Server
 - Javascript Async and Promises
