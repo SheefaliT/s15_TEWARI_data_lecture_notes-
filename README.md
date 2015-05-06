@@ -70,43 +70,43 @@ In VIM:
 
 Then in ANOTHER window:
 
-$ curl http://localhost:3000/api/1.0/whattimeisit  full request response cycle
+	$ curl http://localhost:3000/api/1.0/whattimeisit  full request response cycle
 
 In VIM again:
 
-require 'sinatra'
-require 'sinatra/relaoder' if development?
-
-require 'json'
-
-configure do
-	Set :port, 3000
-end
-
-get '/api/1.0/whattimeisit' do
-	{ status: true, message: "Hello World" }.to_json
-end
+	require 'sinatra'
+	require 'sinatra/relaoder' if development?
+	
+	require 'json'
+	
+	configure do
+		Set :port, 3000
+	end
+	
+	get '/api/1.0/whattimeisit' do
+		{ status: true, message: "Hello World" }.to_json
+	end
 
 Then do curl again. 
 
 In VIM again:
 
-require 'sinatra'
-require 'sinatra/relaoder' if development?
-
-require 'json'
-
-configure do
-	Set :port, 3000
-end
-
-get '/api/1.0/whattimeisit' do
-	{ status: true, message: Time.now }.to_json + "\n"
-end
+	require 'sinatra'
+	require 'sinatra/relaoder' if development?
+	
+	require 'json'
+	
+	configure do
+		Set :port, 3000
+	end
+	
+	get '/api/1.0/whattimeisit' do
+		{ status: true, message: Time.now }.to_json + "\n"
+	end
 
 To run it:
 
-ruby service.rb
+	ruby service.rb
 
 Database?
 Id 
