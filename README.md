@@ -55,7 +55,7 @@ How to operate it on service?
 
 In Class Coding
 In VIM:
-::
+
 
 	require 'sinatra'
 	require 'sinatra/relaoder' if development?
