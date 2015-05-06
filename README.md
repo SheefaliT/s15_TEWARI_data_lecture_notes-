@@ -56,6 +56,8 @@ How to operate it on service?
 In Class Coding
 In VIM:
 
+"
+
 require 'sinatra'
 require 'sinatra/relaoder' if development?
 
@@ -66,6 +68,8 @@ end
 get '/api/1.0/whattimeisit' do
 	"Hello World"
 end
+
+"
 
 Then in ANOTHER window:
 
@@ -246,7 +250,8 @@ Controllers
 	- An access token identifies a particular user
 	- OAuth allows an application to act on behalf of many users
 
-# OAuth.Properties 
+OAuth.Properties 
+
 - First step in accessing Twitter data via the REST, Search, and Streaming APIs is to create a file called oauth.properties
 - Single JSON object inside with these properties
 
